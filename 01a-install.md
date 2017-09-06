@@ -48,7 +48,7 @@ cross-platform.
 
 Did you install Python 2 or 3? Why?  
 
->> Python 3 so it can also accomendate HackerRank.
+>> Python 3 so it can also accommodate HackerRank.
 
 ### Q2. Which Python Version Installed   
 
