@@ -12,7 +12,7 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lists and tuples are both sequences of values/elements. The most important difference is tuples are immutable, and tuples are used as keys in dictionaries, since only immutable elements can be used as keys.
 
 ---
 
@@ -20,7 +20,9 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> A set behaves like a collection of dictionary keys with no values. Lists are ordered collections of elements while sets are unordered collections of unique elements. Ex. [1,2,2,3] vs. set {[1,2,2,3]} is just set {1,2,3}.
+
+Sets are faster for finding an element since its values are hashable. When lists have to go sequentially to find out if the value exists. Sets have a hash function that directly jumps and locates the bucket.
 
 ---
 
@@ -28,15 +30,28 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
-
+>> While normal functions are defined using the def keyword, anonymous functions are defined using the lambda keyword. Lambda is userful to define functions inline, so it's good to be used as arguments for a higher-order function. 
+Ex.Use lambda to sort a list of tuples by the second value each element has.
+tuples = [(1,2,3),(3,1,5),(2,0,7)]
+sorted(tuples, key=lambda tup: tup[1])
 ---
 
 ### Q4. List Comprehension, Map &amp; Filter
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> List comprehensions are a tool for transforming one list (any iterable actually) into another list. During this transformation, elements can be conditionally included in the new list and each element can be transformed as needed. List comprehensions can be written as for loops but are usually faster than the equivalent for loops.
+
+Ex. Equivalents with 'map':
+squares = map(lambda x: x**2, range(10))
+while in list comprehension:
+squares = [x**2 for x in range(10)]
+
+Equivalents with 'filter':
+filsquares = filter(lambda x: x > 5 and x < 50, squares)
+while in list comprehension:
+filsquares = [x**2 for x in range(10) if x**2 > 5 and x**2 < 50 ]
+
 
 ---
 
