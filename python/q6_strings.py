@@ -3,6 +3,12 @@
 
 
 def donuts(count):
+    if count >= 10:
+        return 'Number of donuts: many'
+    else:
+        return 'Number of donuts: '+str(count)
+    
+    
     """
     Given an int count of a number of donuts, return a string of the
     form 'Number of donuts: <count>', where <count> is the number
@@ -22,6 +28,10 @@ def donuts(count):
 
 
 def both_ends(s):
+    if len(s)<2:
+        return ''
+    else:
+        return s[:2]+s[-2:]
     """
     Given a string s, return a string made of the first 2 and the last
     2 chars of the original string, so 'spring' yields 'spng'.
@@ -41,6 +51,8 @@ def both_ends(s):
 
 
 def fix_start(s):
+    return s[0] + s[1:].replace(s[0],'*')
+
     """
     Given a string s, return a string where all occurences of its
     first char have been changed to '*', except do not change the
@@ -60,6 +72,7 @@ def fix_start(s):
 
 
 def mix_up(a, b):
+    return b[:2]+a[2:]+' '+a[:2]+b[2:]
     """
     Given strings a and b, return a single string with a and b
     separated by a space '<a> <b>', except swap the first 2 chars of
@@ -78,6 +91,12 @@ def mix_up(a, b):
 
 
 def verbing(s):
+    if len(s)>=3 and s[-3:]=='ing':
+        return s + 'ly'
+    elif len(s)>=3:
+        return s + 'ing'
+    else:
+        return s
     """
     Given a string, if its length is at least 3, add 'ing' to its end.
     Unless it already ends in 'ing', in which case add 'ly' instead.
@@ -95,6 +114,12 @@ def verbing(s):
 
 
 def not_bad(s):
+    noto = s.find('not')
+    bado = s.find('bad')
+    if bado > noto:
+        return s[:noto]+'good'+s[bado+3:]
+    else:
+        return s
     """
     Given a string, find the first appearance of the substring 'not'
     and 'bad'. If the 'bad' follows the 'not', replace the whole
@@ -115,6 +140,8 @@ def not_bad(s):
 
 
 def front_back(a, b):
+    hlena, hlenb = (len(a) + 1)/2, (len(b) + 1)/2
+    return a[:hlena] + b[:hlenb] + a[hlena:] + b[hlenb:]
     """
     Consider dividing a string into two halves. If the length is even,
     the front and back halves are the same length. If the length is
