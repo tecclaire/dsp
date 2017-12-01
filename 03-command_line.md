@@ -43,14 +43,14 @@ What do the following commands do:
 `ls -lah`  
 `ls -t`  
 `ls -Glp`  
-
-`ls`: list files and directories in the current directory
-`ls -a` : list files and directories including the hidden ones in the current directory
-`ls -l`: list files in the long format as a table
-`ls -lh` : list files in the long format as a table and display file sizes with units (human readable formats)
-`ls -lah` : list files including the hidden ones in the long format as a table and disply file sizes with units
-`ls -t`: list and order files by time of the latest modification
-`ls -Glp`: list files in the long format and put "/" after directories 
+> >
+`ls`: list files and directories in the current directory  
+`ls -a` : list files and directories including the hidden ones in the current directory  
+`ls -l`: list files in the long format as a table  
+`ls -lh` : list files in the long format as a table and display file sizes with units (human readable formats)  
+`ls -lah` : list files including the hidden ones in the long format as a table and disply file sizes with units  
+`ls -t`: list and order files by time of the latest modification  
+`ls -Glp`: list files in the long format and put "/" after directories   
 ---
 
 ### Q3.  More List Files in Unix  
