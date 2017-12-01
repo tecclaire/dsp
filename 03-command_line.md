@@ -58,11 +58,11 @@ What do the following commands do:
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
 > > 
-ls -1
-ls -d
-ls -c
-ls -h
-ls -R
+ls -1  
+ls -d  
+ls -c  
+ls -h  
+ls -R  
 
 ---
 
@@ -70,7 +70,8 @@ ls -R
 
 What does `xargs` do? Give an example of how to use it.
 
-> > "xargs" as "excute arguments"reads data from standard input (stdin) and executes the command (supplied to it as argument) one or more times based on the input read. It is useful and conveninent to excute orders, like at times when you don't need to define a new funtcion to do stuff. 
+> >  
+"xargs" as "excute arguments"reads data from standard input (stdin) and executes the command (supplied to it as argument) one or more times based on the input read. It is useful and conveninent to excute orders, like at times when you don't need to define a new funtcion to do stuff. 
 
 Ex. The following xargs takes stdin from the echo and displays the numbers in two columns:
 echo 1 2 3 4 | xargs -n 2
